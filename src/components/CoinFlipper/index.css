@@ -1,0 +1,22 @@
+.CoinFlipper h1 {
+    margin-bottom: 0;
+}
+
+.CoinFlipper button {
+    padding: 5px 20px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 24px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #FFB200;
+    cursor: pointer;
+}
+
+.CoinFlipper button:hover {
+    background-color: #FFCB42;
+}
+
+.CoinFlipper p {
+    font-size: 20px;
+}
