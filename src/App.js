@@ -4,6 +4,8 @@ import ColorBoxes from "./components/ColorBoxes";
 import CoinFlipper from "./components/CoinFlipper";
 import Lottery from "./components/Lottery";
 import RollDice from "./components/RollDice";
+import Keeper from "./components/Keeper";
+import Emojipedia from "./components/Emojipedia";
 
 function App() {
   const [displayComponent, setDisplayComponent] = useState("ColorBoxes");
@@ -25,6 +27,12 @@ function App() {
       case "RollDice":
         targetComponent = <RollDice />;
         break;
+      case "Keeper":
+        targetComponent = <Keeper />;
+        break;
+      case "Emojipedia":
+        targetComponent = <Emojipedia />;
+        break;
     }
 
     return targetComponent;
@@ -41,6 +49,8 @@ function App() {
         <button onClick={onClickButton}>CoinFlipper</button>
         <button onClick={onClickButton}>Lottery</button>
         <button onClick={onClickButton}>RollDice</button>
+        <button onClick={onClickButton}>Keeper</button>
+        <button onClick={onClickButton}>Emojipedia</button>
       </div>
 
       <div className="component-title">
