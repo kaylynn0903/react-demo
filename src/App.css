@@ -3,6 +3,10 @@
   font-family: 'Maven Pro', sans-serif;
 }
 
+button {
+  font-family: 'Maven Pro', sans-serif;
+}
+
 .button-section {
   display: flex;
   justify-content: space-evenly;
@@ -11,7 +15,6 @@
 
 .button-section button {
   padding: 10px 20px;
-  font-family: 'Maven Pro', sans-serif;
   font-size: 24px;
   border: 0;
   border-radius: 10px;

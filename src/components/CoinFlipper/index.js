@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Coin from "./Coin";
-import { choice } from "./helpers";
 import "./index.css";
 
 class CoinFlipper extends Component {
@@ -22,8 +21,13 @@ class CoinFlipper extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  choice(arr) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+  }
+
   flipCoin() {
-    const newCoin = choice(this.props.coins);
+    const newCoin = this.choice(this.props.coins);
     this.setState((prevState) => {
       return {
         currCoin: newCoin,
@@ -34,7 +38,7 @@ class CoinFlipper extends Component {
     });
   }
 
-  handleClick(e) {
+  handleClick() {
     this.flipCoin();
   }
 

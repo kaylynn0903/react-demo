@@ -6,7 +6,7 @@ class Lottery extends Component {
   static defaultProps = {
     title: "Lotto",
     numBalls: 6,
-    maxNum: 47,
+    maxNum: 49,
   };
 
   constructor(props) {
@@ -18,11 +18,19 @@ class Lottery extends Component {
   }
 
   generateBalls() {
-    this.setState((currState) => ({
-      nums: currState.nums.map(
-        (n) => Math.floor(Math.random() * this.props.maxNum) + 1
-      ),
-    }));
+    let set = new Set();
+    let newArray = this.state.nums
+      .map(() => {
+        let newNum;
+        do {
+          newNum = Math.floor(Math.random() * this.props.maxNum) + 1;
+        } while (set.has(newNum));
+        set.add(newNum);
+        return newNum;
+      })
+      .sort((a, b) => a - b);
+
+    this.setState({ nums: newArray });
   }
 
   render() {

@@ -2,7 +2,7 @@ form.create-note {
     position: relative;
     width: 480px;
     margin: 30px auto 20px auto;
-    background: #fff;
+    background: #ffffff;
     padding: 15px;
     border-radius: 7px;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
@@ -13,7 +13,7 @@ form.create-note {
     border: none;
     padding: 4px;
     outline: none;
-    font-size: 1.2em;
+    font-size: 18px;
     font-family: inherit;
     resize: none;
   }
@@ -22,7 +22,7 @@ form.create-note {
     right: 18px;
     bottom: -18px;
     background: #f5ba13;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 50%;
     width: 36px;
